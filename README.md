@@ -11,5 +11,5 @@ Here is the link to my Assignment 1 Document:
 https://github.com/Benton7/CS4375_Portfolio/blob/main/Assignment%20%231_%20Data%20Exporation.pdf
 Here is the link to my Regression PDF Document: 
 https://github.com/Benton7/CS4375_Portfolio/blob/main/Regression%20(2).pdf 
-Here is the link to my Classification.Rmd Document: (Couldn't fix the knit issue for this file) 
-https://github.com/Benton7/CS4375_Portfolio/blob/main/Classification.Rmd
+Here is the link to my Classification PDF Document: 
+https://github.com/Benton7/CS4375_Portfolio/blob/main/Classification.pdf
