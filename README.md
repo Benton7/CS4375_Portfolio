@@ -18,6 +18,8 @@ https://github.com/Benton7/CS4375_Portfolio/blob/main/Classification.pdf
 ## Assignment 3: ML Algorithms from Scratch
 Here is the link to my Assignment Document:  
 https://github.com/Benton7/CS4375_Portfolio/blob/main/ML%20Algorithms%20from%20Scratch%20(1).pdf  
-Here is the link to my Linear Regression Code:  
+Here is the link to my Logistic Regression Code:  
 https://github.com/Benton7/CS4375_Portfolio/blob/main/ML%20Assignment%202.cpp  
+Here is the link to my Naive Bayes code:  
+https://github.com/Benton7/CS4375_Portfolio/blob/main/NaiveBayes.cpp
 
