@@ -1,0 +1,82 @@
+---
+title: "Dimensionality Reduction"
+author: "Benton Fariss"
+date: "2023-03-23"
+output: pdf_document
+---
+The Dataset: https://www.kaggle.com/datasets/ujjwalchowdhury/walmartcleaned?datasetId=2169207&language=R 
+#Read in dataset
+```{r}
+data <- read.csv('walmart_cleaned.csv')
+set.seed(1234)
+data$IsHoliday <- as.factor(data$IsHoliday)
+print(nrow(data))
+```
+#Load Libraries
+```{r}
+library(caret)
+library(dplyr)
+library(MASS)
+library(class)
+```
+#Data Cleaning
+Remove Unimportant Columns
+```{r}
+data_remove <- c(1, 3)
+data <- data[,-data_remove]
+str(data)
+```
+Since I already removed the only column with NA's I only need to check and Remove the 0's that are not contributing to the dataset
+```{r}
+print(sapply(data, function(x) sum(length(which(x==0)))))
+data <- data[!(data$MarkDown1==0),]
+data <- data[!(data$MarkDown2==0),]
+data <- data[!(data$MarkDown3==0),]
+data <- data[!(data$MarkDown4==0),]
+data <- data[!(data$MarkDown5==0),]
+print(nrow(data))
+```
+#Split data into Train/Test 
+```{r}
+i <- sample(1:nrow(data), nrow(data)*.8, replace=FALSE)
+train <- data[i,]
+test <- data[-i,]
+print(nrow(train))
+```
+#PCA
+PCA
+```{r}
+pca_out <- preProcess(train[,1:15], method=c("center", "scale", "pca"))
+pca_out
+pca_train <- predict(pca_out, train[,1:15])
+pca_test <- predict(pca_out, test[,])
+```
+Regression on the original dataset
+```{r}
+library(class)
+pred <- knn(train=train[,2:15], test=test[,2:15], cl=train[,2], k=3)
+acc <- mean(pred==test$IsHoliday)
+print(paste("Normal kNN Accuracy: ",acc))
+```
+Regression on reduced dataset
+```{r}
+library(class)
+pred <- knn(train=pca_train[,2:12], test=pca_test[,2:12], cl=pca_train[,1], k=3)
+acc <- mean(pred==test$IsHoliday)
+print(paste("PCA kNN Accuracy: ",acc))
+```
+Accuracy Comparison: We get a higher accuracy on the reduced dataset with it's accuracy being .9932324. This is because we reduced the observations that were less correlated.  
+#LDA
+LDA. This shows us the means of all of the observations when it is and isn't a holiday.
+```{r}
+lda1 <- lda(train$IsHoliday~., data=train)
+lda1$means
+```
+LDA Predictions
+```{r}
+pred <- predict(lda1, newdata=test, type="class")
+acc <- mean(pred$class==test$IsHoliday)
+print(paste("LDA Accuracy: ", acc))
+```
+#Overall Analysis
+Overall, the PCA accuracy increased the accuracy of the dataset. This is because PCA is great for reducing datasets with many dimensions, such as this one, and in turn the noise is quieted. PCA also reduces noise by removing redundant and low-correlated observations and variables. The PCA kNN had an accuracy of .9932324 which was higher than the normal kNN's accuracy of .990132. My PCA reduced the datasets 15 variables to just 12 while keeping a 95% variance. My LDA accuracy was .931084 which is not bad at all, just not as good as how PCA was. Overall, both dataset reduction methods proved to be viable on this dataset. 
