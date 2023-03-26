@@ -23,3 +23,9 @@ https://github.com/Benton7/CS4375_Portfolio/blob/main/ML%20Assignment%202.cpp
 Here is the link to my Naive Bayes code:  
 https://github.com/Benton7/CS4375_Portfolio/blob/main/NaiveBayes.cpp
 
+## Assignment 4: Similarity and Ensemble  
+Here is the link to my Dimensionality Reduction(Part 4) Assignment Document:  
+https://github.com/Benton7/CS4375_Portfolio/blob/main/Dimensionality-Reduction.pdf  
+Here is the link to my Dimensionality Reduction(Part 4) Code:  
+https://github.com/Benton7/CS4375_Portfolio/blob/main/Dimensionality%20Reduction.Rmd  
+
