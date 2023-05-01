@@ -31,7 +31,8 @@ https://github.com/Benton7/CS4375_Portfolio/blob/main/Dimensionality%20Reduction
 ## Assignment 5: Python ML with sklearn  
 Here is the link to my SKLearn pdf:   
 https://github.com/Benton7/CS4375_Portfolio/blob/main/SKLearn%20(1).pdf    
-## Assignment 6: Image Classification:  
+## Assignment 6: Image Classification:   
+Here is the link to my Image Classification pdf:  
 https://github.com/Benton7/CS4375_Portfolio/blob/main/Image_Classification.pdf  
 
 
