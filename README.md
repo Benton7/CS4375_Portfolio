@@ -33,7 +33,11 @@ Here is the link to my SKLearn pdf:
 https://github.com/Benton7/CS4375_Portfolio/blob/main/SKLearn%20(1).pdf    
 ## Assignment 6: Image Classification:   
 Here is the link to my Image Classification pdf:  
-https://github.com/Benton7/CS4375_Portfolio/blob/main/Image_Classification.pdf  
-
+https://github.com/Benton7/CS4375_Portfolio/blob/main/Image_Classification.pdf    
+## Assignment 7: Wrapping up the Portfolio:   
+Here is the link to the skills learned/refined and exemplified throughout this portfolio:   
+https://github.com/Benton7/CS4375_Portfolio/blob/main/PortfolioSkills      
+Summary Paragraph:   
+I am excited about the technical skills and soft skills that I have developed through the course. My passion for machine learning has grown exponentially, as I see how it can be applied in solving real-world problems and innovating technology. For my future personal projects, I plan to focus on areas such as deep learning and natural language processing. With the rapid evolution of machine learning, I am aware of the need to keep up-to-date with the latest developments in the field. To achieve this, I am going to take the knowledge that I have obtained and apply it to fields of interest for me. For example, I am a huge sports statistics geek and plan on using aspects of Machine Learning in order to better predict how players are going to play in the next football season.  I plan to continue learning about ML and AI through online courses, attending conferences, and collaborating with peers. As a young professional, I am interested in exploring potential job opportunities in the field of machine learning, where I can apply my skills and contribute to groundbreaking projects.
 
 
